@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .content {
+    box-sizing: content-box;
+    width: 200px;
+    background-color: blue;
+    padding: 5px;
+
+  }
+
+  .box {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 200px;
+    background-color: brown;
+
+  }
+
+  .inline {
+    display: inline;
+    width: 200px;
+    background-color: aqua;
+  }
+
+  .block {
+    display: block;
+    width: 200px;
+    background-color: aqua;
+  }
+</style>
+
+<body>
+  <div class="content">
+    <h1>I am content Box</h1>
+  </div>
+
+  <div class="box">
+    <h1>
+      I am box model
+    </h1>
+  </div>
+  <h1 class="block">I am block I am block I am block</h1>
+  <span class="inline">I am inline ia m inline iam inline</span>
+</body>
+
+</html>
