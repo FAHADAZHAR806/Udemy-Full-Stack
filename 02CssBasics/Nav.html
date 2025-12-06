@@ -9,45 +9,111 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 10px;
+      padding: 0;
       background-color: #1a1a1a;
       color: #fafafa;
     }
 
-    .nav-bar {
+    .nav-bar1 {
       background-color: #fafafa;
-      padding: 10px;
+      padding: 12px 14px;
 
     }
 
-    nav ul {
+    .nav-bar1 ul {
+      list-style-type: none;
       display: flex;
       justify-content: space-around;
       margin: 0;
       padding: 0;
     }
 
-    nav li {
+    .nav-bar1 li {
+      padding: 6px 8px;
+      border: orangered;
+      border-radius: 1px;
+      background-color: orangered;
+    }
+
+    .nav-bar1 button {
+      background-color: blue;
+      padding: 6px 8px;
+      border: blue;
+      border-radius: 2px;
+    }
+
+    .nav-bar1 a {
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    .nav-bar2 {
+      box-sizing: border-box;
+      background-color: green;
+      margin: 0;
+      padding: 10px;
+      width: 300px;
+
+
+    }
+
+    .nav-items2 {
       list-style-type: none;
     }
 
-    nav a {
-      color: #1a1a1a;
+    .nav-items2 a {
       text-decoration: none;
+      display: block;
+      padding: 20px;
+      margin: 5px 0px;
+      color: white;
+    }
+
+    .nav-items2 button {
+      background-color: blue;
+      padding: 10px 80px;
+      margin-bottom: 10px;
+      border: 0.5px solid rgb(255, 255, 255);
+
+    }
+
+    .nav-items2 a:hover {
+      color: black;
+    }
+
+    .nav-items2 button:hover {
+      background-color: rgb(0, 204, 255);
+      border: 0px;
     }
   </style>
 </head>
 
 <body>
-  <div>
-    <nav class="nav-bar">
-      <ul nav-items>
+  <div style="margin: 20px 0px;">
+    <nav class="nav-bar1">
+      <ul class="nav-items1">
         <li><a href="">Home</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Link</a></li>
         <button>Login</button>
+
       </ul>
 
+    </nav>
+  </div>
+
+  <h1>Vertical Nav Bar</h1>
+  <div>
+
+
+    <nav class="nav-bar2">
+      <ul class="nav-items2">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <button>Login</button>
+
+      </ul>
     </nav>
   </div>
 </body>
