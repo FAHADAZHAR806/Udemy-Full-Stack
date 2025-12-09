@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .item {
+    background-color: blue;
+    border: 1px solid black;
+  }
+
+  .container {
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 3fr; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 200px;
+    gap: 2px;
+  }
+
+  .item1 {}
+
+  .bigcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 50px);
+    gap: 2px;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item2">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+  </div>
+  <div class="bigcontainer" style="margin-top: 10px ">
+    <div class="item11" style="background-color: blue;">1</div>
+    <div class="item12" style="background-color: brown;">2</div>
+    <div class="item13" style="background-color: blue;">3</div>
+    <div class="item14" style="background-color: brown;">4</div>
+    <div class="item15" style="background-color: blue">5</div>
+    <div class="item16" style="background-color: brown;">6</div>
+  </div>
+</body>
+
+</html>
