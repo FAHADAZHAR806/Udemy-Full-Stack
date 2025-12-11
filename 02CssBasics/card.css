@@ -1,10 +1,11 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  font-style: inherit;
   margin: 0;
   padding: 0;
 }
 body {
-  background-color: aliceblue;
+  background-color: rgba(201, 200, 198, 0.562);
   color: #1a1a1a;
   display: grid;
   height: 100vh;
@@ -12,11 +13,12 @@ body {
 }
 .container {
   border: 1px solid rgb(170, 169, 169);
-  border-radius: 10px;
+  border-radius: 14px;
   display: grid;
-  padding: 10px;
+  padding: 14px;
   place-items: center;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(252, 246, 246);
+  box-shadow: 0 4px 10px grey;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 100px);
 }
@@ -28,7 +30,7 @@ img {
   place-items: center;
 }
 .img-contain {
-  border: 2px solid blue;
+  border: 2px solid rgb(240, 98, 4);
   background-color: black;
   border-radius: 100%;
 }
@@ -36,8 +38,22 @@ img {
   margin: 5px 0px;
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 h6 {
-  margin: 5px 0px;
+  margin: 10px 0px;
+}
+i {
+  font-size: 20px;
+  margin: 5px, 0px;
+  cursor: pointer;
+}
+
+.contact {
+  display: grid;
+  place-items: center;
+  margin: 10px 0px;
+  /* gap: 5px; */
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 20px);
 }
