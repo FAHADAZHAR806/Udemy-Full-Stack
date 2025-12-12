@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .responsive {
+      background-color: brown;
+      color: aliceblue;
+      max-width: 200px;
+      font-size: 24px;
+    }
+
+    @media (max-width:600px) {
+      .responsive {
+        background-color: rgb(42, 165, 48);
+
+      }
+
+      body {
+        background-color: rgb(255, 60, 0);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+
+    @media (min-width:601px) and (max-width:1024px) {
+      .responsive {
+        background-color: rgb(165, 42, 99);
+
+      }
+
+      body {
+        background-color: rgb(3, 97, 16);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  </style>
+</head>
+
+<body style="margin:  0; padding: 0; display: flex; justify-content: center; height: 100vh;  align-items: center;">
+  <div class="responsive">
+    I am responsive Div
+  </div>
+</body>
+
+</html>
