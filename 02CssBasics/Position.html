@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .relative-box {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      right: 50px;
+      bottom: 50px;
+      background-color: red;
+    }
+
+    .absolute-box {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      background-color: aqua;
+    }
+
+    .static-box {
+      width: 100px;
+      height: 100px;
+      position: static;
+      background-color: yellow;
+    }
+
+    .parent-container {
+      background-color: brown;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent-container">
+    <div class="static-box">1</div>
+    <div class="relative-box">2</div>
+    <div class="absolute-box">3</div>
+  </div>
+</body>
+
+</html>
