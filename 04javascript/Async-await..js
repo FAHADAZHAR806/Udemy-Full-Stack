@@ -15,9 +15,9 @@ function fetchPosts() {
 }
 
 async function fetchAllData() {
-  console.log("Fetching Wait....");
+  console.log("User data");
   let Alldata = await Promise.all([fetchUser(), fetchPosts()]);
-  console.log("Fetched Successfully");
+  console.log("Posts Data");
   console.log(Alldata);
 }
 
