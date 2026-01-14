@@ -14,11 +14,30 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     tasks.push(newTask);
     saveTasks();
+    renderTask(newTask);
     todoInput.value = "";
     console.log(tasks);
   });
   function renderTask(task) {
-    console.log(task.text);
+    const li = document.createElement("li");
+    li.setAttribute("data-id", task.id);
+    if (task.completed) li.classList.add("completed");
+    li.innerHTML = `<span>${task.text}</span>
+    <button>Delete</button>
+    `;
+    li.addEventListener("click", (e) => {
+      if (e.target.tagName === "Button") return;
+      task.completed = !task.completed;
+      li.classList.toggle("completed");
+      saveTasks();
+    });
+
+    li.querySelector("button").addEventListener("click", (e) => {
+      e.stopPropagation();
+      tasks = tasks.filter((t) => t.id !== task.id);
+      li.remove(tasks);
+    });
+    todoList.appendChild(li);
   }
 
   function saveTasks() {
