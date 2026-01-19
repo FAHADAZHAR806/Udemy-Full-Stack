@@ -9,19 +9,36 @@ document.addEventListener("DOMContentLoaded", () => {
     if (taskText === "") return;
     const newTask = {
       id: Date.now(),
-      task: taskText,
+      text: taskText,
       completed: false,
     };
     tasks.push(newTask);
-    saveTaks();
+    saveTasks();
+    renderTasks(newTask);
     todoInput.value = ""; //clear
     console.log(tasks);
   });
   function renderTasks(task) {
-    console.log(task);
+    const li = document.createElement("li");
+    li.setAttribute("data-id", task.id);
+    if (task.completed) li.classList.add("completed");
+    li.innerHTML = `<span>${task.text}</span>
+    <button>Delete</button>`;
+    li.addEventListener("click", (e) => {
+      if (e.target.tagName === "Button") return;
+      task.completed = !task.completed;
+      li.classList.toggle("completed");
+      saveTasks();
+    });
+    li.querySelector("button").addEventListener("click", (e) => {
+      e.stopPropagation();
+      tasks = tasks.filter((t) => t.id !== task.id);
+      li.remove();
+      saveTasks();
+    });
+    todoList.appendChild(li);
   }
-
-  function saveTaks() {
+  function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 });
