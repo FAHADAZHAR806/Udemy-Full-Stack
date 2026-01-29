@@ -12,10 +12,27 @@ body {
   align-items: center;
 }
 .container {
+  display: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(112, 85, 85);
+  border-radius: 10px;
+  padding: 20px;
+}
+h1,
+#error-message {
+  text-align: center;
+}
+.input-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100wh;
-  background-color: red;
+  gap: 10px;
+  padding: 10px;
+}
+#city-input,
+#get-weather-btn {
+  padding: 10px;
+  border-color: white;
   border-radius: 10px;
 }
