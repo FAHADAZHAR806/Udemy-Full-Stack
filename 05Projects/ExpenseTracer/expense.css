@@ -41,3 +41,11 @@ button {
   align-items: center;
   gap: 10px;
 }
+li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: #2e302e;
+}
